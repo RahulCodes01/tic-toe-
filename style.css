@@ -1,0 +1,94 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text for better visibility */
+    transition: background-color 0.5s; /* Smooth background transition */
+  }
+  
+  /* Main container */
+  .container {
+    text-align: center;
+  }
+  
+  /* Tic Tac Toe board grid styling */
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin: 20px auto;
+  }
+  
+  /* Individual cell styling */
+  .cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #87ceeb; /* Light blue background initially */
+    border: 1px solid #4682b4; /* Steel blue border */
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth color transitions */
+  }
+  
+  .cell.taken {
+    cursor: not-allowed;
+  }
+  
+  .cell.x {
+    background-color: #ffcccb; /* Light red background for Rahul */
+    color: #b22222; /* Dark red text for Rahul */
+  }
+  
+  .cell.o {
+    background-color: #add8e6; /* Light blue background for You */
+    color: #00008b; /* Dark blue text for You */
+  }
+  
+  .cell:not(.taken):hover {
+    background-color: #d3ffd3; /* Light green hover */
+    color: #008000; /* Green text on hover */
+  }
+  
+  /* Popup styling */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1c1c1c; /* Dark gray popup background */
+    color: #ffffff; /* White text */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .popup h2 {
+    margin: 0 0 10px;
+  }
+  
+  .popup button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .popup button:hover {
+    background-color: #45a049;
+  }
+  
